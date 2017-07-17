@@ -1,0 +1,7 @@
+<div>
+  <%= form_tag '/posts', method: "post" do %>
+    <p><%= text_field_tag 'title' %></p>
+    <p><%= text_area_tag 'content' %></p>
+    <%= submit_tag 'Submit!' %>
+  <% end %>
+</div>

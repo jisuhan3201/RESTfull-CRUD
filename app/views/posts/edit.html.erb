@@ -1,0 +1,7 @@
+<div>
+  <%= form_tag "/posts/#{@post.id}", method: "patch" do %>
+    <p><%= text_field_tag 'title', @post.title %></p>
+    <p><%= text_area_tag 'content', @post.content %></p>
+    <%= submit_tag 'Submit!' %>
+  <% end %>
+</div>

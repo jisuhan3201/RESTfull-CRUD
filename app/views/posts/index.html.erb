@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+<div>
+  <p><%= post.id %>. <%= post.title %> <%= post.content %></p>
+  <%= link_to '이 글 보기', "/posts/#{post.id}" %>
+  <%= link_to '이 글 수정', "/posts/#{post.id}/edit" %>
+  <%= link_to '이 글 삭제', "/posts/#{post.id}", method: 'delete', data: {confirm: 'Are you sure?'} %>
+</div>
+<% end %>
+
+<p><%= link_to '새 글 쓰기', '/posts/new' %></p>
